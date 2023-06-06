@@ -279,7 +279,7 @@ st.write(top_10_cities)
 st.write(top_10_cities.columns)
 
 # Create a bar plot using Plotly Express
-fig = px.bar(top_10_cities, x=top_10_cities.index, y=top_10_cities.values,color='Location')
+fig = px.bar(top_10_cities, x=top_10_cities.index, y=top_10_cities.values,color=top_10_cities.index)
 
 # Customize the layout
 fig.update_layout(
