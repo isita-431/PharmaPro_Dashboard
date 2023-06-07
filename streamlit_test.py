@@ -294,8 +294,10 @@ fig.update_layout(
 st.plotly_chart(fig)
 st.write('Map plot')
 
-df['latitude'] = df['latitude'].astype(float)
-df['longitude'] = df['longitude'].astype(float)
+# df['latitude'] = df['latitude'].astype(float)
+# df['longitude'] = df['longitude'].astype(float)
+df['latitude'] = pd.to_numeric(df['latitude'], errors='coerce')
+df['longitude'] = pd.to_numeric(df['longitude'], errors='coerce')
 
 st.plotly_chart(fig)
 
