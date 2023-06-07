@@ -289,7 +289,13 @@ fig.update_layout(
 )
 
 # Display the bar plot in Streamlit
+
+
+st.plotly_chart(fig)
 st.write('Map plot')
+
+df['latitude'] = df['latitude'].astype(float)
+df['longitude'] = df['longitude'].astype(float)
 
 st.plotly_chart(fig)
 
