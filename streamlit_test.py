@@ -299,7 +299,6 @@ st.write('Map plot')
 df['latitude'] = pd.to_numeric(df['latitude'], errors='coerce')
 df['longitude'] = pd.to_numeric(df['longitude'], errors='coerce')
 
-st.plotly_chart(fig)
 
 fig = px.scatter_mapbox(df, lat='latitude', lon='longitude',hover_data={'latitude': False, 'longitude': False},text = df['Location'] ,zoom=6, height=500,size_max = 20, 
                                         color='Location')
